@@ -7,6 +7,7 @@
 int main(void)
 {
 	pid_t pid;
+	pid_t ppid;
 
 	printf("Before fork\n");
 
@@ -18,6 +19,16 @@ int main(void)
 		return (1);
 	}
 
-	printf("After fork\n");
+	if (pid == 0)
+	{
+		sleep(35);
+		printf("child\n");
+	}
+	else
+	{
+		ppid = getpid();
+		printf("Parent pid is: %u\n", ppid);
+	}
+
 	return (0);
 }
