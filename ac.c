@@ -4,7 +4,7 @@
  * main - prints all arguments without using ac
  * @av: null terminated array of strings
  * @ac: the number of items in av
- * Retun: always 0
+ * Return: always 0
  */
 int main(int ac, char **av)
 {
